@@ -36,4 +36,14 @@ one
     assertEquals(list.getCount(),listSize + 1);
   }
 
+@Test
+public void testHasCity() {
+  City city = new City("Yellowknife", "Northwest Territories");
+  City city2 = new City("Charlottetown", "Prince Edward Island");
+  CityList cityList = mockCityList();
+  cityList.add(city);
+
+  assertTrue(cityList.hasCity(city));
+  assertFalse(cityList.hasCity(city2));
+  }
 }
