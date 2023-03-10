@@ -41,8 +41,8 @@ one
 
   @Test
   public void testHasCity() {
-    City city = new City("Yellowknife", "Northwest Territories");
-    City city2 = new City("Charlottetown", "Prince Edward Island");
+    City city = new City("Yellowknife", "NT");
+    City city2 = new City("Charlottetown", "PEI");
     CustomList cityList = MockCityList();
     cityList.add(city);
 
