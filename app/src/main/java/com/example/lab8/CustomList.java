@@ -69,11 +69,5 @@ public class CustomList extends ArrayAdapter<City> {
         if(val == -1){return false;}
         else{return true;}
     }
-    
-    public List getCities() {
-        List list = this.cities;
-        Collections.sort(list);
-        return list;
-    }
 
 }
