@@ -71,7 +71,7 @@ public class CustomList extends ArrayAdapter<City> {
     }
     
     public List getCities() {
-        List list = cities;
+        List list = this.cities;
         Collections.sort(list);
         return list;
     }
