@@ -40,7 +40,7 @@ one
 public void testHasCity() {
   City city = new City("Yellowknife", "Northwest Territories");
   City city2 = new City("Charlottetown", "Prince Edward Island");
-  CityList cityList = mockCityList();
+  CustomList cityList = MockCityList();
   cityList.add(city);
 
   assertTrue(cityList.hasCity(city));
