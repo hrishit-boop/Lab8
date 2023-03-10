@@ -24,6 +24,9 @@ public class CustomListTest {
     list = new CustomList(null,new ArrayList<>());
     return list;
   }
+  private City mockCity() {
+        return new City("Edmonton", "Alberta");
+    }
   
   /**
 * get the size of the list
@@ -49,4 +52,27 @@ one
     assertTrue(cityList.hasCity(city));
     assertFalse(cityList.hasCity(city2));
   }
+  
+  @Test
+    public void testDelete() {
+
+        CustomList cityList = MockCityList();
+        assertEquals(1, cityList.getCities().size());
+        cityList.delete(mockCity());
+
+        assertEquals(0, cityList.getCities().size());
+        assertFalse(cityList.getCities().contains(mockCity()));
+    }
+
+    @Test
+    public void testCountCities() {
+
+        City city = new City("Yellowknife", "Northwest Territories");
+        City city2 = new City("Charlottetown", "Prince Edward Island");
+        CustomList cityList = MockCityList();
+        cityList.add(city);
+        assertEquals(2, cityList.countCities());
+        cityList.add(city2);
+        assertEquals(3, cityList.countCities());
+    }
 }
