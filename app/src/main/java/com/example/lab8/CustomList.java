@@ -67,7 +67,7 @@ public class CustomList extends ArrayAdapter<City> {
     
     public boolean hasCity(City city) {
         Boolean bool = false;
-        int val = this.cities.indexOf(city);
+        int val = this.getCities().indexOf(city);
         if(val == -1){return false;}
         else{return true;}
     }
